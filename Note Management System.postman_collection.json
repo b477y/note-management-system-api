@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "4bd4e20e-2763-497f-ba8e-68b01b9906af",
+		"name": "Note Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36994478"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"mohammedsaleh002@outlook.com\",\r\n    \"password\": \"mohammedsaleh002@outlook.com\",\r\n    \"confirmPassword\": \"mohammedsaleh002@outlook.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "System eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmE4NGUzNmQ4ODA1NTMwMWZkNWEzMSIsImlhdCI6MTc1MjE3MjIzNCwiZXhwIjoxNzU0NzY0MjM0fQ.4GB_zTc-Pq865QJ55tScA7zj5xjK_YuVcFW7r46P1hw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bvtty2.0@gmail.com\",\r\n    \"password\": \"batty2.0@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "System eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmE4NGUzNmQ4ODA1NTMwMWZkNWEzMSIsImlhdCI6MTc1MjE3MjIzNCwiZXhwIjoxNzU0NzY0MjM0fQ.4GB_zTc-Pq865QJ55tScA7zj5xjK_YuVcFW7r46P1hw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emaill\": \"bvtty2.0@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/forget-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "System eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NmE4NGUzNmQ4ODA1NTMwMWZkNWEzMSIsImlhdCI6MTc1MjE3MjIzNCwiZXhwIjoxNzU0NzY0MjM0fQ.4GB_zTc-Pq865QJ55tScA7zj5xjK_YuVcFW7r46P1hw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"bvtty2.0@gmail.com\",\r\n    \"OTP\": \"9383\",\r\n    \"password\": \"batty2.0@gmail.com\",\r\n    \"confirmPassword\": \"batty2.0@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODU3MTRhNTA2NzVhNGUzMjU2ZDAyZCIsImlhdCI6MTc1MzU3NzI5MiwiZXhwIjoxNzU2MTY5MjkyLCJqdGkiOiJxdlZTMzE4ZkdMZVRzamgzamU0aWgifQ.b7YcSFS-6mUWfZzt9i_VLFwURu76gN9wdTIe76PnW8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Note",
+			"item": [
+				{
+					"name": "Add note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODU3MTRhNTA2NzVhNGUzMjU2ZDAyZCIsImlhdCI6MTc1MzU3NzI5MiwiZXhwIjoxNzU2MTY5MjkyLCJqdGkiOiJxdlZTMzE4ZkdMZVRzamgzamU0aWgifQ.b7YcSFS-6mUWfZzt9i_VLFwURu76gN9wdTIe76PnW8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"testtttsttttt\",\r\n    \"content\": \"testttssssssssssssssstttt\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Summarize note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/notes/688581b8e82e605f69584731/summarize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"notes",
+								"688581b8e82e605f69584731",
+								"summarize"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete note",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODU3MTRhNTA2NzVhNGUzMjU2ZDAyZCIsImlhdCI6MTc1MzU3NzI5MiwiZXhwIjoxNzU2MTY5MjkyLCJqdGkiOiJxdlZTMzE4ZkdMZVRzamgzamU0aWgifQ.b7YcSFS-6mUWfZzt9i_VLFwURu76gN9wdTIe76PnW8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/notes/68857ebb5e376971fb028267",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"notes",
+								"68857ebb5e376971fb028267"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Upload profile picture",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODQyMmUzMDMyMGZhMmJhMjg0OGZiYiIsImlhdCI6MTc1MzUzMjI5NSwiZXhwIjoxNzU2MTI0Mjk1LCJqdGkiOiJNRU5DV3BzLTB1dEV2MHFGbGFSMmcifQ.P60WiJXNKomQIrfsfkSrgaPH_NJwUh4pBKuRKriVhjU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profilePicture",
+									"type": "file",
+									"src": "/C:/Users/En.Lenovo/Desktop/Screenshot 2025-07-25 145340.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/upload-profile-pic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"upload-profile-pic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

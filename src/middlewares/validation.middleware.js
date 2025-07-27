@@ -1,11 +1,9 @@
 export const ValidationMiddleware = (schema) => {
   return async (req, res, next) => {
-    const schemaKeys = Object.keys(schema);
-
     let validationError = [];
 
-    for (const key of schemaKeys) {
-      const { error } = schema[key].validate(req[key], { abortEarly: false });
+    for (const [key, schemaValidator] of Object.entries(schema)) {
+      const { error } = schemaValidator.validate(req[key] || {}, { abortEarly: false });
       if (error) {
         validationError.push(...error.details);
       }
